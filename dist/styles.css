@@ -2,11 +2,25 @@ body {
     color:white;
 
 }
-
+.background-image {
+    background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F24%2F2019%2F08%2Fsnows-bbq-lexington-texas-1.jpg&q=85);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    /* filter: blur(5px); */
+    transform: scale(1.1);
+}
 .head {
     margin: 20px auto 15px auto;
     display: block;
-    height: 200px;
+    height: 140px;
     width: 300px;
     border: solid black 2px;
     background-color: grey;
@@ -15,16 +29,26 @@ body {
     font-weight: 600;
 }
 
+
 .main {
     margin: 20px auto 15px auto;
     display: block;
-    height: 200px;
-    width: 300px;
+    height: 550px;
+    width: 500px;
     border: solid black 2px;
     background-color: grey;
     text-align: center;
     font-size: 30px;
     font-weight: 600;
+}
+.main img {
+    height: 298px;
+    width: 450px;
+    border: solid black 2px;
+}
+
+.main p {
+    margin: 5px auto 15px auto;
 }
 /* .container {
     height:

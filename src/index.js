@@ -1,16 +1,40 @@
-import _ from 'lodash';
+import _, { head } from 'lodash';
 const div = document.querySelector('#content');
+const lineBreak = document.createElement('br');
 
-const menuPage = (()=> {
+const pageHead = (()=> {
     let headDiv = document.createElement('div');
-    let mainDiv = document.createElement('div');
     div.appendChild(headDiv);
-    div.appendChild(mainDiv);
     headDiv.classList.add('head');
     headDiv.textContent = 'Yummy Yummy Tasty Favorite BBQ Restaurant';
-    headDiv.appendChild(document.createElement('p')).textContent = 'Phone: 555-5555  Email: YYTFBBQR';
-    mainDiv.classList.add('main');
-    mainDiv.textContent = 'here is the stuff';
+    const homeButton = document.createElement('button');
+    headDiv.appendChild(lineBreak);
+    headDiv.appendChild(homeButton);
+    homeButton.textContent = 'Home'
+    const menuButton = document.createElement('button');
+    headDiv.appendChild(menuButton);
+    menuButton.textContent = 'Menu';
+    const contactButton = document.createElement('button');
+    headDiv.appendChild(contactButton);
+    contactButton.textContent = 'Contact';
+    homeButton.addEventListener('click', () => {
+        div.removeChild(div.lastElementChild);
+        
+        // home();
+    });
 })();
 
-console.log('dog');
+window.onload = home();
+function home() {
+    let mainDiv = document.createElement('div');
+    div.appendChild(mainDiv);
+    mainDiv.classList.add('main');
+    mainDiv.appendChild(document.createElement('p')).textContent = 
+    'Your neighborhood\'s yummiest BBQ spot, since 1765.';
+    mainDiv.appendChild(document.createElement('p')).textContent = 
+    'Established by George Washington, America\'s first president and BBQ chef.';
+    const meatImage = document.createElement('img');
+    meatImage.src = 'https://pbs.twimg.com/media/BjQ7QJICcAAG0GB.jpg';
+    mainDiv.appendChild(meatImage);
+
+};
