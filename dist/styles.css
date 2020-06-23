@@ -52,25 +52,28 @@ body {
 }
 
 .menu {
-    width: 100%;
+    margin: auto;
+    width: 90%;
     height: 80vh;
-    border: black solid 12px;
+    border: black solid 2px;
     background: white;
     
 }
 
 .menu-item {
-    width: 15vw;
-    height: 20vh;
+    width: 150px;
+    height: 150px;
     border: solid black 2px;
-    display: inline-block;
+    display: inline-table;
     text-align: center;
     color: blue;
+    background-color: grey;
+    margin: 30px;
+    padding: 3px;
 }
 
-.menu-item img {
+/* .menu-item img {
     height: 100%;
-    width: 100%;
+    width: 100%; */
     
     
-}
