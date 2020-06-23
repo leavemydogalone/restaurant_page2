@@ -1,6 +1,12 @@
-import _, { head } from 'lodash';
+import _, { head } from 'lodash'
+import { menu } from './menu'
+import { home } from './home'
+// import { contact } from './contact.js';
+
 const div = document.querySelector('#content');
 const lineBreak = document.createElement('br');
+
+
 
 const pageHead = (()=> {
     let headDiv = document.createElement('div');
@@ -19,22 +25,36 @@ const pageHead = (()=> {
     contactButton.textContent = 'Contact';
     homeButton.addEventListener('click', () => {
         div.removeChild(div.lastElementChild);
-        
-        // home();
+        home();
+    });
+    menuButton.addEventListener('click', () => {
+        div.removeChild(div.lastElementChild);
+        menu();
     });
 })();
 
-window.onload = home();
-function home() {
-    let mainDiv = document.createElement('div');
-    div.appendChild(mainDiv);
-    mainDiv.classList.add('main');
-    mainDiv.appendChild(document.createElement('p')).textContent = 
-    'Your neighborhood\'s yummiest BBQ spot, since 1765.';
-    mainDiv.appendChild(document.createElement('p')).textContent = 
-    'Established by George Washington, America\'s first president and BBQ chef.';
-    const meatImage = document.createElement('img');
-    meatImage.src = 'https://pbs.twimg.com/media/BjQ7QJICcAAG0GB.jpg';
-    mainDiv.appendChild(meatImage);
+window.onload = menu();
 
-};
+// function home() {
+//     let mainDiv = document.createElement('div');
+//     div.appendChild(mainDiv);
+//     mainDiv.classList.add('main');
+//     mainDiv.appendChild(document.createElement('p')).textContent = 
+//     'Your neighborhood\'s yummiest BBQ spot, since 1765.';
+//     mainDiv.appendChild(document.createElement('p')).textContent = 
+//     'Established by George Washington, America\'s first president and BBQ chef.';
+//     const meatImage = document.createElement('img');
+//     meatImage.src = 'https://pbs.twimg.com/media/BjQ7QJICcAAG0GB.jpg';
+//     mainDiv.appendChild(meatImage);
+
+// };
+
+// function menu() {
+//     let menuDiv = document.createElement('div');
+//     div.appendChild(menuDiv);
+//     menuDiv.classList.add('menu');
+//     const createMenuItem = (picture, ) => {
+
+//     };
+// };
+
