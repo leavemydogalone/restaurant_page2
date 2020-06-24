@@ -72,8 +72,14 @@ body {
     padding: 3px;
 }
 
-/* .menu-item img {
-    height: 100%;
-    width: 100%; */
-    
-    
+.contact {
+    margin: 20px auto 15px auto;
+    display: block;
+    height: 275px;
+    width: 500px;
+    border: solid black 2px;
+    background-color: grey;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+};

@@ -24,7 +24,8 @@ const menu = () => {
             newDiv.appendChild(newP);
             newP.textContent = input;
         };
-        // newDiv.style.backgroundImage = item.image;
+        
+        
         createP(`${item.name}`);
         createP(`${item.cost}`)
         createP(`${item.description}`)
